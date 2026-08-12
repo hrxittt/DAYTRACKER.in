@@ -467,7 +467,7 @@ setTimeout(() => onDelete(task.id), 210);
 
 return (
 <div
-className={task-item${task.done ? " done" : ""}${deleting ? " deleting" : ""}}
+className={`task-item${task.done ? " done" : ""}${deleting ? " deleting" : ""}`}
 draggable
 onDragStart={() => onDragStart(index)}
 onDragOver={(e) => { e.preventDefault(); onDragOver(index); }}
@@ -476,7 +476,7 @@ onDrop={onDrop}
 <span className="drag-handle"><DragIcon /></span>
 <span className="task-num">{String(index + 1).padStart(2, "0")}</span>
 <button
-className={task-check${task.done ? " checked" : ""}}
+className={`task-check${task.done ? " checked" : ""}`}
 onClick={() => onToggle(task.id)}
 aria-label="Toggle task"
 >
@@ -576,7 +576,7 @@ updateDay(tomorrow, (t) => [
 ...t,
 ...incomplete.map((x) => ({ ...x, id: uid(), carried: true })),
 ]);
-showToast(${incomplete.length} task${incomplete.length > 1 ? "s" : ""} carried →);
+showToast(`${incomplete.length} task${incomplete.length > 1 ? "s" : ""} carried →`);
 };
 
 // Drag-to-reorder
@@ -617,7 +617,7 @@ return (
 {total > 0 && (
 <>
 <div className="progress-bar-wrap">
-<div className="progress-bar-fill" style={{ width: ${pct}% }} />
+<div className="progress-bar-fill" style={{ width: `${pct}%` }} />
 </div>
 <div className="progress-label">
 <span>{done}/{total} complete</span>
