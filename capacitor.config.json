@@ -1,0 +1,5 @@
+{
+  "appId": "com.daytracker.app",
+  "appName": "DayTracker",
+  "webDir": "dist"
+}
